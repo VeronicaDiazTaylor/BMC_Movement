@@ -1,0 +1,2 @@
+# BMC_Movement
+BowyersMCのキャラコンを実装したビヘイビアパック
