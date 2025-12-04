@@ -1,0 +1,43 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Movement",
+    "description": "BowyersMC Movement",
+    "version": [1, 0, 1],
+    "uuid": "ea236be9-e06a-41e4-bb9e-deca25a5f2e1",
+    "min_engine_version": [1, 21, 124]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "c96ec97e-09f6-4318-bcd0-1801f5700a12",
+      "version": [1, 0, 0]
+    },
+    {
+      "type": "script",
+      "description": "",
+      "version": [1, 0, 0],
+      "uuid": "b5c5188f-5b1f-4994-854b-9a37c52a26a0",
+      "language": "javascript",
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name":"@minecraft/server",
+      "version": "beta"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "beta"
+    }
+  ],
+  "metadata": {
+    "authors": [ "vdiaztaylor" ],
+    "generated_with": {
+      "blockception-minecraft-bedrock": [
+        "8.0.41"
+      ]
+    }
+  }
+}
