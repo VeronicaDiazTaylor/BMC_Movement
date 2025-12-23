@@ -9,6 +9,8 @@ BowyersMCの一部キャラコンを実装したビヘイビアーパック。
 - 壁ジャンプ (WallBounce)
 - ファストストレート (FastStraight)
 - エアリフラクション (AirRefraction)
+- アップドラフト (Updraft)
+- エアカーブ (AirCurve)
 
 エアストレイフは現在、ScriptAPIのみでプレイヤーの入力検知ができないため、実装していません。    
   <br />
@@ -35,6 +37,6 @@ BowyersMCの一部キャラコンを実装したビヘイビアーパック。
 
 ## 更新予定とサポートについて
 - [x] 統合版バージョンアップの対応 (manifest.jsonの更新) 
-- [ ] ダイヤモンドブロック (AirCurve / エアカーブ) (対象ブロック可変)
-- [ ] エメラルドブロック (Updraft / アップドラフト) (対象ブロック可変)
-- [ ] [ScriptAPIの開発支援フレームワーク"Keystone"](https://github.com/XxPMMPERxX/Keystone)へのソースコードリファクタリング
+- [x] ダイヤモンドブロック (AirCurve / エアカーブ) (対象ブロック可変)
+- [x] エメラルドブロック (Updraft / アップドラフト) (対象ブロック可変)
+- [x] [ScriptAPIの開発支援フレームワーク"Keystone"](https://github.com/XxPMMPERxX/Keystone)へのソースコードリファクタリング
