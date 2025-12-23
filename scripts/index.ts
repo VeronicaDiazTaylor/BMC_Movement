@@ -21,7 +21,7 @@ import { Updraft } from './movement/updraft';
 import { AirCurve } from './movement/airCurve';
 import { EventManager, Priority, repeating } from 'keystonemc';
 import { PlayerPermissionLevel, system, world } from '@minecraft/server';
-import { optionForm } from './form/settingForm';
+import { settingForm } from './form/settingForm';
 
 // 初回のデータ生成
 system.run(() => {
@@ -110,9 +110,9 @@ EventManager.registerAfter('itemUse', {
       
       try {
         if (player.isSneaking) {
-          optionForm.showResetMenu(player);
+          settingForm.showResetMenu(player);
         } else {
-          optionForm.showMainMenu(player);
+          settingForm.showMainMenu(player);
         }
       } catch (error) {
         console.error('UI trigger error:', error);

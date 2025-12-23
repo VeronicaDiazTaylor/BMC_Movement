@@ -1,7 +1,23 @@
+/**
+ *           _ _           _              _            
+ * __   ____| (_) __ _ ___| |_ __ _ _   _| | ___  _ __ 
+ * \ \ / / _` | |/ _` |_  / __/ _` | | | | |/ _ \| '__|
+ *  \ V / (_| | | (_| |/ /| || (_| | |_| | | (_) | |   
+ *   \_/ \__,_|_|\__,_/___|\__\__,_|\__, |_|\___/|_|   
+ *                                  |___/                
+ * 
+ * @author vdiaztaylor
+ * @website https://github.com/VeronicaDiazTaylor
+ * 
+ * NOTE:
+ * このプログラムは非公式サーバーソフトウェアPocketMine-MPで稼働していたBowyersMCをScriptAPIに移植したものです。
+ * ScriptAPIのビヘイビアー開発支援フレームワーク「Keystone」を用いているため、TypeScriptで書かれています。
+ * 
+ */
 import { Player, world } from '@minecraft/server';
 import { BaseModalForm, BaseMessageForm, TextField, Toggle } from 'keystonemc';
 
-class OptionForm {
+class SettingForm {
   /**
    * メイン設定 Form を表示
    * @param player 表示対象プレイヤー
@@ -341,4 +357,4 @@ class OptionForm {
   }
 }
 
-export const optionForm = new OptionForm();
+export const settingForm = new SettingForm();
