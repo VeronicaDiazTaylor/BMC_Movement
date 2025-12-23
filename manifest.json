@@ -1,7 +1,7 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Movement",
+    "name": "BMC Movement",
     "description": "BowyersMC Movement",
     "version": [1, 0, 1],
     "uuid": "ea236be9-e06a-41e4-bb9e-deca25a5f2e1",
