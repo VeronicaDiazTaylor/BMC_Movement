@@ -61,14 +61,22 @@ export function createTextField(key: string, label: string, placeholder: string,
     placeholder: placeholder,
     default: String(world.getDynamicProperty(key)),
     handler(player, value) {
-      const current = String(world.getDynamicProperty(key));
+      const current = world.getDynamicProperty(key);
       if (!validator(value)) {
         player.sendMessage(`${key} 不正な値を検知 (§7${String(current)}§r → §a${String(current)}§r)`);
         return;
       }
-      if (current !== value) {
-        world.setDynamicProperty(key, value);
-        player.sendMessage(formatConfirmMessage(key, current, value));
+
+      let newValue = current;
+      try {
+        newValue = JSON.parse(String(value));
+      } catch {
+        newValue = String(value);
+      }
+
+      if (current !== newValue) {
+        world.setDynamicProperty(key, newValue);
+        player.sendMessage(formatConfirmMessage(key, current, newValue));
       }
     },
   });
