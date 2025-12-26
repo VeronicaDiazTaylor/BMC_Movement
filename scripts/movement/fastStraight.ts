@@ -82,9 +82,7 @@ export class FastStraight extends Movement {
             let currentAirRefractionWaitTicks = player.getDynamicProperty(AirRefraction.WAITING) as number;
             player.setDynamicProperty(AirRefraction.WAITING, --currentAirRefractionWaitTicks);
           }
-        },
-        every: 1,
-        endless: true
+        }
       });
 
       // 空腹度の変更
@@ -106,9 +104,7 @@ export class FastStraight extends Movement {
               hungerComponent.setCurrentValue(Math.max(0, Math.min(20, (hungerComponent?.currentValue ?? 0) + recoveryPerTick)));
             }
           }
-        },
-        every: 1,
-        endless: true
+        }
       });
     }
   }

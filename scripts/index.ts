@@ -21,7 +21,7 @@ import { Updraft } from './movement/updraft';
 import { AirCurve } from './movement/airCurve';
 import { EventManager, Priority, repeating } from 'keystonemc';
 import { PlayerPermissionLevel, system, world } from '@minecraft/server';
-import { settingForm } from './form/settingForm';
+import { home } from './form/homeForm';
 
 // 初回のデータ生成
 system.run(() => {
@@ -78,12 +78,8 @@ repeating({
       updraft.onActivate(player);
       airCurve.onActivate(player);
     }
-  },
-  every: 1,
-  endless: true
+  }
 });
-
-EventManager.initialize();
 
 // 参加時にキャラコンのフラグを削除する
 EventManager.registerAfter('playerSpawn', {
@@ -108,15 +104,7 @@ EventManager.registerAfter('itemUse', {
       const player = event.source;
       if (player.playerPermissionLevel !== PlayerPermissionLevel.Operator) return;
       
-      try {
-        if (player.isSneaking) {
-          settingForm.showResetMenu(player);
-        } else {
-          settingForm.showMainMenu(player);
-        }
-      } catch (error) {
-        console.error('UI trigger error:', error);
-      }
+      home().send(player);
     }
   },
   priority: Priority.HIGHEST

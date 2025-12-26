@@ -84,9 +84,7 @@ export class WallBounce extends Movement {
               hungerComponent.setCurrentValue(Math.max(0, Math.min(20, (hungerComponent?.currentValue ?? 0) + recoveryPerTick)));
             }
           }
-        },
-        every: 1,
-        endless: true
+        }
       });
     }
   }

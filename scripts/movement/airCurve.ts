@@ -60,14 +60,12 @@ export class AirCurve extends Movement {
         next.z *= (settings.horizontalMultiplier as number);
         player.clearVelocity();
         player.applyImpulse(next);
-      },
-      every: 1,
-      endless: true
+      }
     });
   }
 
   isCanHandleBlock(block: Block): boolean {
-    return block.typeId === `minecraft:${(world.getDynamicProperty('AIR_CURVE.BLOCK') as string)}`;
+    return block.typeId === (world.getDynamicProperty('AIR_CURVE.BLOCK') as string);
   }
 
   fetchSettings(): Record<string, unknown> {

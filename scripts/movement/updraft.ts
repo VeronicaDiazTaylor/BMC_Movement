@@ -51,7 +51,7 @@ export class Updraft extends Movement {
   }
 
   isCanHandleBlock(block: Block): boolean {
-    return block.typeId === `minecraft:${(world.getDynamicProperty('UPDRAFT.BLOCK') as string)}`;
+    return block.typeId === (world.getDynamicProperty('UPDRAFT.BLOCK') as string);
   }
 
   fetchSettings(): Record<string, unknown> {
